@@ -1,100 +1,68 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gunpla Compare — เทียบสเปกกันพลา PG / RG / Mega Size</title>
-<meta name="description" content="เครื่องมือเทียบสเปกกันพลา PG, RG, Mega Size แบบ custom filter ดูราคาเยน-บาท ความสูง วัสดุ และจุดเด่นแต่ละตัว">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gunpla Compare</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="grid-overlay" aria-hidden="true"></div>
-
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <span class="brand-mark">⬡</span>
-      <div class="brand-text">
-        <span class="brand-name">GUNPLA COMPARE</span>
-        <span class="brand-sub">SPEC SHEET TERMINAL // PG · RG · MEGA</span>
+  <header class="app-header">
+    <div class="header-container">
+      <h1>Gunpla Compare</h1>
+      <div class="meta-chips">
+        <span id="rateChip" class="chip"></span>
+        <span id="updatedChip" class="chip"></span>
       </div>
     </div>
-    <div class="header-meta">
-      <span class="meta-chip" id="rateChip">1 JPY ≈ 0.2045 THB</span>
-      <span class="meta-chip meta-chip--muted" id="updatedChip">UPDATED 2026.06.19</span>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="intro">
-    <h1>เลือกตัวที่อยากเทียบ<br><span class="accent">ตัดสินใจซื้อให้ชัวร์ก่อนโอนเงิน</span></h1>
-    <p class="intro-sub">กรองตามเกรด ค้นหาชื่อรุ่น แล้วติ๊กเลือกตัวที่สนใจ — ระบบจะเรียงเทียบสเปกให้แบบตารางเดียวจบ</p>
-  </section>
-
-  <section class="controls" aria-label="ตัวกรองและค้นหา">
-    <div class="controls-row">
-      <div class="search-box">
-        <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M11.5 11.5L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <input type="text" id="searchInput" placeholder="ค้นหาชื่อรุ่น เช่น Unicorn, Freedom, Zaku..." autocomplete="off">
+    
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="ค้นหาตามชื่อ หรือ ซีรีส์...">
+      
+      <div id="gradeFilters" class="grade-filters">
+        <button class="grade-chip is-active" data-grade="ALL">All</button>
+        <button class="grade-chip" data-grade="PG">PG</button>
+        <button class="grade-chip" data-grade="RG">RG</button>
+        <button class="grade-chip" data-grade="MEGA SIZE">Mega Size</button>
       </div>
-      <div class="grade-filters" id="gradeFilters" role="group" aria-label="กรองตามเกรด">
-        <button class="grade-chip grade-chip--all is-active" data-grade="ALL">ทั้งหมด</button>
-        <button class="grade-chip grade-chip--pg" data-grade="PG">PG</button>
-        <button class="grade-chip grade-chip--rg" data-grade="RG">RG</button>
-        <button class="grade-chip grade-chip--mega" data-grade="MEGA SIZE">MEGA SIZE</button>
-      </div>
-    </div>
-    <div class="controls-row controls-row--sort">
-      <label class="sort-label" for="sortSelect">เรียงตาม</label>
+
       <select id="sortSelect">
-        <option value="name-asc">ชื่อ A→Z</option>
-        <option value="price-asc">ราคา: ต่ำ→สูง</option>
-        <option value="price-desc">ราคา: สูง→ต่ำ</option>
-        <option value="height-asc">ความสูง: เตี้ย→สูง</option>
-        <option value="height-desc">ความสูง: สูง→เตี้ย</option>
-        <option value="year-desc">ปีออก: ใหม่→เก่า</option>
+        <option value="name-asc">ชื่อ (A-Z)</option>
+        <option value="price-asc">ราคา (ต่ำ-สูง)</option>
+        <option value="price-desc">ราคา (สูง-ต่ำ)</option>
+        <option value="height-asc">ความสูง (ต่ำ-สูง)</option>
+        <option value="height-desc">ความสูง (สูง-ต่ำ)</option>
+        <option value="year-desc">ปีใหม่ล่าสุด</option>
       </select>
-      <span class="selected-count" id="selectedCount">เลือกแล้ว 0 ตัว</span>
-      <button class="clear-btn" id="clearSelection">ล้างตัวเลือก</button>
     </div>
-  </section>
+  </header>
 
-  <section class="catalog" aria-label="รายการกันพลาทั้งหมด">
-    <div class="catalog-grid" id="catalogGrid"></div>
-  </section>
+  <main class="container">
+    <section id="catalogGrid" class="catalog-grid"></section>
+  </main>
 
-  <section class="compare-bar" id="compareBar" aria-live="polite">
-    <div class="compare-bar-inner">
-      <span class="compare-bar-text">
-        <strong id="compareBarCount">0</strong> ตัวที่เลือกไว้
-      </span>
-      <button class="compare-btn" id="openCompareBtn" disabled>เปิดตารางเทียบ →</button>
-    </div>
-  </section>
-</main>
-
-<div class="compare-overlay" id="compareOverlay" role="dialog" aria-modal="true" aria-label="ตารางเปรียบเทียบ">
-  <div class="compare-panel">
-    <div class="compare-panel-header">
-      <h2>ตารางเปรียบเทียบ</h2>
-      <button class="close-btn" id="closeCompareBtn" aria-label="ปิด">✕</button>
-    </div>
-    <div class="compare-table-wrap" id="compareTableWrap">
-      <!-- table injected by JS -->
+  <div id="compareBar" class="compare-bar">
+    <div class="compare-bar-content">
+      <span id="selectedCount">เลือกแล้ว 0 ตัว</span>
+      <div class="compare-actions">
+        <button id="clearSelection" class="btn-secondary">ล้างทั้งหมด</button>
+        <button id="openCompareBtn" class="btn-primary" disabled>เปรียบเทียบตอนนี้ (<span id="compareBarCount">0</span>)</button>
+      </div>
     </div>
   </div>
-</div>
 
-<footer class="site-footer">
-  <p>ราคาเยนอ้างอิงราคา MSRP ของบันได (รวมภาษี) ราคาบาทคำนวณจากอัตราคงที่ ณ วันที่ระบุ — ไม่ใช่ realtime และไม่รวมค่าส่ง/นำเข้า โปรดตรวจสอบราคาจริงก่อนตัดสินใจซื้อ</p>
-  <p class="footer-edit-hint">ข้อมูลอยู่ใน <code>data/gundam-data.json</code> — เพิ่ม/แก้ไขรุ่นได้โดยตรงในไฟล์นี้</p>
-</footer>
+  <div id="compareOverlay" class="compare-overlay">
+    <div class="compare-modal">
+      <header class="modal-header">
+        <h2>เปรียบเทียบรุ่น Gunpla</h2>
+        <button id="closeCompareBtn" class="close-btn" aria-label="ปิด">✕</button>
+      </header>
+      <div id="compareTableWrap" class="compare-table-wrap">
+        </div>
+    </div>
+  </div>
 
-<script src="js/app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
