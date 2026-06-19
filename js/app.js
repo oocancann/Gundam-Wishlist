@@ -1,5 +1,5 @@
 // ===========================================================
-// GUNPLA COMPARE — app logic
+// GUNPLA COMPARE — app logic (Apple Style Edition)
 // ===========================================================
 
 const state = {
@@ -30,18 +30,12 @@ const els = {
 
 // -------- grade helpers --------
 function gradeClassSuffix(grade){
-  return grade.toLowerCase().replace(/\s+/g, '-'); // "MEGA SIZE" -> "mega-size"
-}
-function gradeColorVar(grade){
-  if(grade === 'PG') return 'var(--gold)';
-  if(grade === 'RG') return 'var(--green)';
-  return 'var(--blue)'; // MEGA SIZE
+  return grade.toLowerCase().replace(/\s+/g, '-');
 }
 
 // -------- SVG placeholder generator (blueprint mecha glyph) --------
-function placeholderSVG(grade, sizeKey){
+function placeholderSVG(grade){
   const color = grade === 'PG' ? '#C9A961' : grade === 'RG' ? '#5B8C5A' : '#4A7FA8';
-  // simple abstract mecha-head silhouette, blueprint line style
   return `
   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <g fill="none" stroke="${color}" stroke-width="2" opacity="0.85">
@@ -63,15 +57,17 @@ async function loadData(){
     const json = await res.json();
     state.allModels = json.models;
     state.meta = json.meta;
-    if(state.meta.exchangeRate){
+    if(state.meta.exchangeRate && els.rateChip){
       els.rateChip.textContent = `1 JPY ≈ ${state.meta.exchangeRate} THB`;
     }
-    if(state.meta.lastUpdated){
+    if(state.meta.lastUpdated && els.updatedChip){
       els.updatedChip.textContent = `UPDATED ${state.meta.lastUpdated.replace(/-/g,'.')}`;
     }
     render();
   }catch(err){
-    els.catalogGrid.innerHTML = `<div class="empty-state">โหลดข้อมูลไม่สำเร็จ — ตรวจสอบว่ารันผ่าน local server (ไม่ใช่เปิดไฟล์ตรงๆ)<br><span style="opacity:.6">${err.message}</span></div>`;
+    if(els.catalogGrid) {
+      els.catalogGrid.innerHTML = `<div class="empty-state">โหลดข้อมูลไม่สำเร็จ — ตรวจสอบไฟล์ข้อมููล<br><span style="opacity:.6">${err.message}</span></div>`;
+    }
     console.error(err);
   }
 }
@@ -115,6 +111,7 @@ function getFilteredModels(){
 
 // -------- render catalog --------
 function renderCatalog(){
+  if(!els.catalogGrid) return;
   const list = getFilteredModels();
   if(list.length === 0){
     els.catalogGrid.innerHTML = `<div class="empty-state">ไม่พบรุ่นที่ตรงกับคำค้นหา ลองคำอื่นหรือเปลี่ยนตัวกรองเกรด</div>`;
@@ -128,9 +125,6 @@ function renderCatalog(){
     return `
     <article class="card ${isSelected ? 'is-selected':''}" data-id="${m.id}" tabindex="0" role="button" aria-pressed="${isSelected}" aria-label="เลือก ${m.name}">
       <span class="card-grade-tag card-grade-tag--${gSuffix}">${m.grade}</span>
-      <span class="card-checkbox">
-        <svg width="13" height="10" viewBox="0 0 13 10" fill="none"><path d="M1 5L4.5 8.5L12 1" stroke="#0F1115" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
       <div class="card-image">${placeholderSVG(m.grade)}</div>
       <div class="card-body">
         <span class="card-series">${escapeHtml(m.series)}</span>
@@ -161,7 +155,6 @@ function toggleSelect(id){
     state.selectedIds.delete(id);
   } else {
     if(state.selectedIds.size >= 4){
-      // soft cap at 4 for readable comparison; replace oldest? just block with feedback
       flashCapWarning();
       return;
     }
@@ -169,18 +162,20 @@ function toggleSelect(id){
   }
   renderCatalog();
   updateCompareBar();
-  if(els.compareOverlay.classList.contains('is-open')){
+  if(els.compareOverlay && els.compareOverlay.classList.contains('is-open')){
     renderCompareTable();
   }
 }
 
 function flashCapWarning(){
-  els.compareBarCount.style.color = 'var(--accent-bright)';
+  if(!els.compareBarCount || !els.selectedCount) return;
+  els.compareBarCount.style.color = 'red';
   els.selectedCount.textContent = 'เลือกได้สูงสุด 4 ตัว';
   setTimeout(()=>{ updateCompareBar(); }, 1400);
 }
 
 function updateCompareBar(){
+  if(!els.selectedCount || !els.compareBarCount || !els.openCompareBtn || !els.compareBar) return;
   const n = state.selectedIds.size;
   els.selectedCount.textContent = `เลือกแล้ว ${n} ตัว`;
   els.compareBarCount.textContent = n;
@@ -206,6 +201,7 @@ const ROWS = [
 ];
 
 function renderCompareTable(){
+  if(!els.compareTableWrap) return;
   const selected = state.allModels.filter(m => state.selectedIds.has(m.id));
   if(selected.length === 0){
     els.compareTableWrap.innerHTML = `<div class="compare-empty">ยังไม่ได้เลือกตัวเปรียบเทียบ — ปิดหน้าต่างนี้แล้วเลือกจากรายการ</div>`;
@@ -214,7 +210,6 @@ function renderCompareTable(){
 
   let html = `<table class="compare-table"><thead><tr><th class="row-label">รุ่น</th>`;
   selected.forEach(m => {
-    const gSuffix = gradeClassSuffix(m.grade);
     html += `<th>
       <div class="col-header">
         <div class="col-header-image">
@@ -239,7 +234,6 @@ function renderCompareTable(){
   html += `</tbody></table>`;
   els.compareTableWrap.innerHTML = html;
 
-  // attach remove handlers
   els.compareTableWrap.querySelectorAll('[data-remove-id]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -279,62 +273,82 @@ function render(){
   updateCompareBar();
 }
 
-els.catalogGrid.addEventListener('click', (e) => {
-  const card = e.target.closest('.card');
-  if(!card) return;
-  toggleSelect(card.dataset.id);
-});
-els.catalogGrid.addEventListener('keydown', (e) => {
-  if(e.key === 'Enter' || e.key === ' '){
+if(els.catalogGrid){
+  els.catalogGrid.addEventListener('click', (e) => {
     const card = e.target.closest('.card');
     if(!card) return;
-    e.preventDefault();
     toggleSelect(card.dataset.id);
-  }
-});
+  });
+  els.catalogGrid.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' || e.key === ' '){
+      const card = e.target.closest('.card');
+      if(!card) return;
+      e.preventDefault();
+      toggleSelect(card.dataset.id);
+    }
+  });
+}
 
-els.searchInput.addEventListener('input', (e) => {
-  state.searchQuery = e.target.value;
-  renderCatalog();
-});
+if(els.searchInput){
+  els.searchInput.addEventListener('input', (e) => {
+    state.searchQuery = e.target.value;
+    renderCatalog();
+  });
+}
 
-els.gradeFilters.addEventListener('click', (e) => {
-  const btn = e.target.closest('.grade-chip');
-  if(!btn) return;
-  state.activeGrade = btn.dataset.grade;
-  els.gradeFilters.querySelectorAll('.grade-chip').forEach(c => c.classList.remove('is-active'));
-  btn.classList.add('is-active');
-  renderCatalog();
-});
+if(els.gradeFilters){
+  els.gradeFilters.addEventListener('click', (e) => {
+    const btn = e.target.closest('.grade-chip');
+    if(!btn) return;
+    state.activeGrade = btn.dataset.grade;
+    els.gradeFilters.querySelectorAll('.grade-chip').forEach(c => c.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    renderCatalog();
+  });
+}
 
-els.sortSelect.addEventListener('change', (e) => {
-  state.sortBy = e.target.value;
-  renderCatalog();
-});
+if(els.sortSelect){
+  els.sortSelect.addEventListener('change', (e) => {
+    state.sortBy = e.target.value;
+    renderCatalog();
+  });
+}
 
-els.clearSelection.addEventListener('click', () => {
-  state.selectedIds.clear();
-  renderCatalog();
-  updateCompareBar();
-});
+if(els.clearSelection){
+  els.clearSelection.addEventListener('click', () => {
+    state.selectedIds.clear();
+    renderCatalog();
+    updateCompareBar();
+  });
+}
 
-els.openCompareBtn.addEventListener('click', () => {
-  renderCompareTable();
-  els.compareOverlay.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
-});
+if(els.openCompareBtn){
+  els.openCompareBtn.addEventListener('click', () => {
+    renderCompareTable();
+    if(els.compareOverlay){
+      els.compareOverlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+}
 
-els.closeCompareBtn.addEventListener('click', closeCompare);
-els.compareOverlay.addEventListener('click', (e) => {
-  if(e.target === els.compareOverlay) closeCompare();
-});
+if(els.closeCompareBtn) els.closeCompareBtn.addEventListener('click', closeCompare);
+
+if(els.compareOverlay){
+  els.compareOverlay.addEventListener('click', (e) => {
+    if(e.target === els.compareOverlay) closeCompare();
+  });
+}
+
 document.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape' && els.compareOverlay.classList.contains('is-open')) closeCompare();
+  if(e.key === 'Escape' && els.compareOverlay && els.compareOverlay.classList.contains('is-open')) closeCompare();
 });
 
 function closeCompare(){
-  els.compareOverlay.classList.remove('is-open');
-  document.body.style.overflow = '';
+  if(els.compareOverlay){
+    els.compareOverlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
 }
 
 // -------- init --------
