@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gunpla Compare — เทียบสเปกกันพลา PG / RG / Mega Size</title>
+<meta name="description" content="เทียบสเปกกันพลา PG, RG, Mega Size แบบ side-by-side — ราคา ความสูง วัสดุ จุดเด่น ครบในหน้าเดียว">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#">
+      <span class="logo-icon">⬡</span>
+      <div>
+        <div class="logo-name">GUNPLA COMPARE</div>
+        <div class="logo-sub">PG · RG · MEGA SIZE</div>
+      </div>
+    </a>
+    <div class="header-chips">
+      <span class="chip chip--rate" id="rateChip">1 JPY ≈ 0.2045 THB</span>
+      <span class="chip chip--date" id="updatedChip">อัพเดต 2026.06.19</span>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- SIDEBAR FILTERS -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">เกรด</div>
+      <div class="grade-group" id="gradeFilters">
+        <button class="grade-btn is-active" data-grade="ALL">ทั้งหมด <span class="grade-count" id="count-ALL"></span></button>
+        <button class="grade-btn grade-btn--pg" data-grade="PG">PG <span class="grade-count" id="count-PG"></span></button>
+        <button class="grade-btn grade-btn--rg" data-grade="RG">RG <span class="grade-count" id="count-RG"></span></button>
+        <button class="grade-btn grade-btn--mega" data-grade="MEGA SIZE">MEGA SIZE <span class="grade-count" id="count-MEGA"></span></button>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">ราคา (เยน)</div>
+      <div class="price-range">
+        <div class="price-inputs">
+          <input type="number" id="priceMin" placeholder="ต่ำสุด" min="0">
+          <span class="price-sep">–</span>
+          <input type="number" id="priceMax" placeholder="สูงสุด" min="0">
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">ความสูง (mm)</div>
+      <div class="price-inputs">
+        <input type="number" id="heightMin" placeholder="ต่ำสุด" min="0">
+        <span class="price-sep">–</span>
+        <input type="number" id="heightMax" placeholder="สูงสุด" min="0">
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">ปีวางจำหน่าย</div>
+      <div class="price-inputs">
+        <input type="number" id="yearMin" placeholder="จาก" min="1990">
+        <span class="price-sep">–</span>
+        <input type="number" id="yearMax" placeholder="ถึง" min="1990">
+      </div>
+    </div>
+
+    <button class="reset-btn" id="resetFilters">รีเซ็ตตัวกรองทั้งหมด</button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+      <div class="search-wrap">
+        <svg class="search-ico" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M11 11L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <input class="search-input" type="text" id="searchInput" placeholder="ค้นหาชื่อรุ่น เช่น Unicorn, Freedom..." autocomplete="off">
+        <button class="search-clear" id="searchClear" style="display:none">✕</button>
+      </div>
+      <div class="toolbar-right">
+        <span class="result-count" id="resultCount">— รุ่น</span>
+        <select class="sort-select" id="sortSelect">
+          <option value="name-asc">ชื่อ A→Z</option>
+          <option value="price-asc">ราคา: ต่ำ→สูง</option>
+          <option value="price-desc">ราคา: สูง→ต่ำ</option>
+          <option value="height-desc">ความสูง: มาก→น้อย</option>
+          <option value="height-asc">ความสูง: น้อย→มาก</option>
+          <option value="year-desc">ปีออก: ใหม่→เก่า</option>
+        </select>
+        <button class="view-btn is-active" id="viewGrid" title="Grid">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+        </button>
+        <button class="view-btn" id="viewList" title="List">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="2" width="14" height="2.5" rx="1"/><rect x="1" y="6.75" width="14" height="2.5" rx="1"/><rect x="1" y="11.5" width="14" height="2.5" rx="1"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ACTIVE FILTER TAGS -->
+    <div class="active-filters" id="activeFilters"></div>
+
+    <!-- CATALOG -->
+    <div class="catalog-grid" id="catalogGrid"></div>
+
+  </main>
+</div>
+
+<!-- COMPARE BAR -->
+<div class="compare-bar" id="compareBar">
+  <div class="compare-bar-inner">
+    <div class="compare-bar-left">
+      <div class="compare-thumbs" id="compareThumbs"></div>
+      <span class="compare-label">เลือกแล้ว <strong id="compareBarCount">0</strong> ตัว (สูงสุด 4)</span>
+    </div>
+    <div class="compare-bar-right">
+      <button class="btn-ghost" id="clearSelection">ล้าง</button>
+      <button class="btn-primary" id="openCompareBtn" disabled>เปรียบเทียบ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARE OVERLAY -->
+<div class="overlay" id="compareOverlay">
+  <div class="overlay-panel">
+    <div class="overlay-header">
+      <h2>เปรียบเทียบสเปก</h2>
+      <button class="close-btn" id="closeCompareBtn">✕</button>
+    </div>
+    <div class="overlay-body" id="compareTableWrap"></div>
+  </div>
+</div>
+
+<!-- DETAIL OVERLAY -->
+<div class="overlay" id="detailOverlay">
+  <div class="overlay-panel overlay-panel--detail">
+    <div class="overlay-header">
+      <h2 id="detailTitle">รายละเอียด</h2>
+      <button class="close-btn" id="closeDetailBtn">✕</button>
+    </div>
+    <div class="overlay-body" id="detailBody"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>ราคาเยน = MSRP บันได (รวมภาษี 10%) · ราคาบาทคำนวณจากอัตราคงที่ ไม่รวมค่าส่ง/นำเข้า · ข้อมูลอยู่ใน <code>gundam-data.json</code></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
