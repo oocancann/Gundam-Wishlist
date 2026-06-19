@@ -1,0 +1,620 @@
+{
+  "meta": {
+    "exchangeRate": 0.2045,
+    "exchangeRateNote": "1 JPY ≈ 0.2045 THB (กลางเดือนมิถุนายน 2026, อัตราคงที่ ไม่ realtime)",
+    "lastUpdated": "2026-06-19",
+    "priceNote": "ราคาเยนเป็นราคา MSRP จากบันไดอย่างเป็นทางการ (รวมภาษี 10%) ราคาไทยเป็นการแปลงตามอัตราคงที่ ไม่รวมค่าส่ง/ค่านำเข้า ราคาขายจริงในไทยอาจสูงกว่านี้"
+  },
+  "models": [
+    {
+      "id": "pg-rx78-2-unleashed",
+      "name": "RX-78-2 Gundam (Unleashed Ver.)",
+      "series": "Mobile Suit Gundam",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 300,
+      "material": "ABS, PS, PC, ไดคาสต์บางส่วน",
+      "priceYen": 27500,
+      "releaseYear": 2020,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2020/10/item_01_3328.jpg",
+      "highlights": [
+        "เฟรมภายในละเอียดที่สุดในตระกูล RX-78-2 ทุกรุ่น",
+        "LED ไฟส่องในตัวบีมเซเบอร์และตา",
+        "ข้อต่อเคลื่อนไหวได้กว่า 90 จุดทั่วตัว",
+        "กลไกเปิดฝาครอบ (hatch) เยอะที่สุดในประวัติศาสตร์กันพลา"
+      ],
+      "goodFor": "นักสะสมที่อยากได้ RX-78-2 ตัวธงสุดยอดในชั้นวาง งบสูงแต่คุ้มรายละเอียด"
+    },
+    {
+      "id": "pg-unicorn",
+      "name": "RX-0 Unicorn Gundam",
+      "series": "Mobile Suit Gundam Unicorn",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 320,
+      "material": "ABS, PS, PC",
+      "priceYen": 35200,
+      "releaseYear": 2017,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2017/06/item_01_2913.jpg",
+      "highlights": [
+        "ระบบแปลงร่าง Unicorn → Destroy Mode อัตโนมัติด้วยกลไกภายใน",
+        "ไซโคแฟรมเรืองแสงสีชมพูได้จริงแบบไม่ต้องทาสี (มีรุ่น LED แยก)",
+        "พาเนลไลน์และรายละเอียดผิวสมจริงระดับสูงสุด",
+        "ฐานวางพร้อมที่ใส่ตัวละครประกอบฉาก"
+      ],
+      "goodFor": "แฟน UC ที่อยากเห็นกลไกแปลงร่างทำงานจริงโดยไม่ต้องแกะประกอบใหม่"
+    },
+    {
+      "id": "pg-unleashed-nu-gundam",
+      "name": "RX-93 ν Gundam (Unleashed Ver.)",
+      "series": "Mobile Suit Gundam: Char's Counterattack",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 305,
+      "material": "ABS, PS, PC, ไดคาสต์บางส่วน",
+      "priceYen": 38500,
+      "releaseYear": 2025,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2025/03/item_01_3500.jpg",
+      "highlights": [
+        "ฟินฟันเนล (Fin Funnel) ถอดประกอบและจัดท่าได้อิสระ 6 ตัว",
+        "เฟรมรุ่นใหม่ตามมาตรฐาน Evolution Link System",
+        "พร้อมฉากมือถือไรเฟิล/ชิลด์/บาซูก้าครบชุด",
+        "รายละเอียดท่อไฮดรอลิกและกล้ามเนื้อกลไกสมจริง"
+      ],
+      "goodFor": "คนที่ชื่นชอบหนัง Char's Counterattack และอยากได้ Nu Gundam ตัวเรือธงรุ่นใหม่ล่าสุด"
+    },
+    {
+      "id": "pg-strike-gundam",
+      "name": "GAT-X105 Strike Gundam",
+      "series": "Mobile Suit Gundam SEED",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 290,
+      "material": "ABS, PS, PC",
+      "priceYen": 22000,
+      "releaseYear": 2014,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2014/03/item_01_2587.jpg",
+      "highlights": [
+        "รองรับชุด Striker Pack แยก 3 แบบ (Aile, Sword, Launcher) ขายเสริมได้",
+        "ราคาย่อมเยากว่า PG รุ่นอื่นเมื่อเทียบขนาด",
+        "ข้อต่อยืดหดได้ที่ขาเพื่อรองรับชุดเสริม",
+        "ตัวเลือกดีสำหรับเริ่มเล่น PG ตัวแรก"
+      ],
+      "goodFor": "คนที่อยากเริ่มเล่น PG ตัวแรกแบบงบไม่บานปลาย และชอบซีรีส์ SEED"
+    },
+    {
+      "id": "pg-wing-gundam-zero-ew",
+      "name": "Wing Gundam Zero (EW)",
+      "series": "New Mobile Report Gundam Wing: Endless Waltz",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 285,
+      "material": "ABS, PS, PC",
+      "priceYen": 24200,
+      "releaseYear": 2011,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2011/05/item_01_2228.jpg",
+      "highlights": [
+        "ปีกกางกระพือได้จริงด้วยกลไกในตัว ไม่ต้องดัดมือ",
+        "ทวินบัสเตอร์ไรเฟิลขนาดใหญ่สมจริง",
+        "ทรงตัวยืนกางปีกได้โดยไม่ต้องพึ่งฐาน (ขึ้นกับสภาพข้อต่อ)",
+        "ดีไซน์คลาสสิกที่แฟน Gundam Wing ยกให้เป็นตัวจบ"
+      ],
+      "goodFor": "แฟนซีรีส์ Wing ที่อยากได้ของเด่นสุดในไลน์ และชอบงานช่วงปีกกางอลังการ"
+    },
+    {
+      "id": "pg-freedom-gundam",
+      "name": "ZGMF-X10A Freedom Gundam",
+      "series": "Mobile Suit Gundam SEED Destiny",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 300,
+      "material": "ABS, PS, PC",
+      "priceYen": 26400,
+      "releaseYear": 2007,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_1665.jpg",
+      "highlights": [
+        "ปีกกางพร้อมไฟ LED ส่องไรเฟิลและตา (รุ่น Lighting ขายแยก)",
+        "จุดยึดอาวุธครบ 8 จุดตามภาพต้นฉบับ",
+        "เป็นรุ่นคลาสสิกที่ยังคงได้รับความนิยมแม้เปิดตัวมานาน",
+        "ทรงโพสท่าบินได้สวยด้วยฐานวางเฉพาะ"
+      ],
+      "goodFor": "แฟน SEED Destiny สายคลาสสิก ที่อยากได้ Freedom ตัวใหญ่สมจริง"
+    },
+    {
+      "id": "pg-exia",
+      "name": "GN-001 Gundam Exia",
+      "series": "Mobile Suit Gundam 00",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 290,
+      "material": "ABS, PS, PC",
+      "priceYen": 23100,
+      "releaseYear": 2009,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_1873.jpg",
+      "highlights": [
+        "ดาบ GN ทั้ง 4 เล่มถอดประกอบจัดท่าได้",
+        "โครงเฟรมบางเพรียวตามคาแรกเตอร์ดีไซน์ต้นฉบับ",
+        "GN Drive แบบใสเรืองแสงได้ (ต้องใช้ไฟแยก)",
+        "ข้อต่อบิดเอวและไหล่กว้างกว่ารุ่นร่วมยุค"
+      ],
+      "goodFor": "แฟน Gundam 00 ที่ชอบทรงผอมเพรียว ออกท่าดาบได้หลากหลาย"
+    },
+    {
+      "id": "pg-zaku-ii",
+      "name": "MS-06S Zaku II (Char's Custom)",
+      "series": "Mobile Suit Gundam",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 285,
+      "material": "ABS, PS, PC",
+      "priceYen": 22000,
+      "releaseYear": 2006,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_1450.jpg",
+      "highlights": [
+        "ตัวร้ายในตำนาน สีแดงเฉพาะของชาร์ อัสนาเบิล",
+        "ท่อไฮดรอลิกหลังและข้อต่อสมจริงระดับ PG",
+        "ราคาคุ้มเมื่อเทียบกับ PG ตัวอื่นในยุคเดียวกัน",
+        "ตัวเลือกดีสำหรับคนอยากได้โมบิลสูทฝั่งศัตรู"
+      ],
+      "goodFor": "สายสะสมที่อยากได้ Zaku ตัวธงคู่กับ RX-78-2 ในชั้นวาง"
+    },
+    {
+      "id": "pg-sazabi",
+      "name": "MSN-04 Sazabi",
+      "series": "Mobile Suit Gundam: Char's Counterattack",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 380,
+      "material": "ABS, PS, PC, ไดคาสต์",
+      "priceYen": 33000,
+      "releaseYear": 2008,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_1700.jpg",
+      "highlights": [
+        "ตัวใหญ่ที่สุดตัวหนึ่งในไลน์ PG สูงเกือบ 38 ซม.",
+        "ฟันเนลและไฟแนนเชียลในตัวจัดเก็บได้",
+        "ใช้ไดคาสต์ผสมเพิ่มน้ำหนักและความแน่นของข้อต่อ",
+        "ดีไซน์ตัวร้ายที่ทรงพลังที่สุดของชาร์ในภาคนี้"
+      ],
+      "goodFor": "นักสะสมที่ต้องการตัวเด่นไซส์ใหญ่ตั้งโชว์ และชอบโมบิลสูทฝั่งนีโอ ซีออน"
+    },
+    {
+      "id": "pg-aile-strike",
+      "name": "GAT-X105 Aile Strike Gundam",
+      "series": "Mobile Suit Gundam SEED",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 290,
+      "material": "ABS, PS, PC",
+      "priceYen": 23100,
+      "releaseYear": 2014,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2014/03/item_01_2588.jpg",
+      "highlights": [
+        "มาพร้อมชุด Aile Striker Pack ติดตัวสำเร็จ",
+        "เบากว่ารุ่น Sword/Launcher ทำให้ทรงตัวง่าย",
+        "เหมาะเป็นตัวเริ่มต้นสาย Strike ก่อนซื้อชุดเสริมเพิ่ม",
+        "ฐานราคาประหยัดกว่าตัวที่ขายพร้อมชุดใหญ่"
+      ],
+      "goodFor": "คนที่อยากได้ Strike Gundam ทรงเบาคล่องตัว ไม่อยากแบกชุดเสริมหนัก"
+    },
+    {
+      "id": "pg-zeta-gundam",
+      "name": "MSZ-006 Zeta Gundam",
+      "series": "Mobile Suit Zeta Gundam",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 290,
+      "material": "ABS, PS, PC",
+      "priceYen": 24200,
+      "releaseYear": 2011,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2226.jpg",
+      "highlights": [
+        "แปลงร่างเป็น Wave Rider ได้จริงด้วยมือ ไม่ต้องถอดชิ้นส่วน",
+        "กลไกแปลงร่างซับซ้อนแต่แน่นหนาคงทน",
+        "เป็นหนึ่งใน PG ที่ท้าทายการประกอบที่สุดในไลน์",
+        "เหมาะกับคนที่อยากโชว์ทั้งสองโหมดสลับกัน"
+      ],
+      "goodFor": "สายเทคนิคที่อยากสัมผัสกลไกแปลงร่างกันพลาขั้นสูง"
+    },
+    {
+      "id": "pg-destiny-gundam",
+      "name": "ZGMF-X42S Destiny Gundam",
+      "series": "Mobile Suit Gundam SEED Destiny",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 300,
+      "material": "ABS, PS, PC",
+      "priceYen": 26400,
+      "releaseYear": 2017,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2017/03/item_01_2882.jpg",
+      "highlights": [
+        "ปีก 8 ใบพร้อมไฟ LED ส่องสว่างได้ (ต้องซื้อชุดไฟแยก)",
+        "อาวุธประจำกายครบทั้งดาบและปืนใหญ่ในตัว",
+        "เป็น PG รุ่นหลังที่ปรับโครงสร้างให้แน่นกว่ารุ่นเก่า",
+        "ทรงปีกกางสวยเหมาะเป็นตัวโชว์หลักของคอลเลกชัน"
+      ],
+      "goodFor": "แฟน SEED Destiny ที่ต้องการบอสตัวสุดท้ายของเรื่องในไซส์ใหญ่"
+    },
+    {
+      "id": "pg-evangelion-unit01",
+      "name": "Evangelion Unit-01 (Test Type)",
+      "series": "Neon Genesis Evangelion",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 270,
+      "material": "ABS, PS, PVC",
+      "priceYen": 22000,
+      "releaseYear": 1997,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_0001.jpg",
+      "highlights": [
+        "PG ตัวแรกในประวัติศาสตร์ ก่อนจะมี PG Gundam ตัวแรกในปีถัดมา",
+        "กล้ามเนื้อยางจำลองใต้เกราะแบบตัวจริงในอนิเมะ",
+        "เหมาะกับแฟน Evangelion ที่อยากได้โมเดลระดับพรีเมียม",
+        "งานสะสมที่มีคุณค่าทางประวัติศาสตร์ของสายโมเดล"
+      ],
+      "goodFor": "แฟน Evangelion และนักสะสมที่สนใจจุดเริ่มต้นของไลน์ PG"
+    },
+    {
+      "id": "pg-gundam-base-rx78-3",
+      "name": "RX-78-3 G-3 Gundam (Extra Finish Ver.)",
+      "series": "Mobile Suit Gundam (Gundam Base Limited)",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 300,
+      "material": "ABS, PS, PC พร้อมชุบโครเมียม",
+      "priceYen": 30800,
+      "releaseYear": 2021,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2021/03/item_01_3360.jpg",
+      "highlights": [
+        "จำหน่ายเฉพาะร้าน Gundam Base เท่านั้น หายากกว่ารุ่นทั่วไป",
+        "พื้นผิวชุบโครเมียมสีพิเศษไม่มีขายในรุ่นปกติ",
+        "โครงสร้างเดียวกับ RX-78-2 Unleashed แต่ปรับสี G-3",
+        "เหมาะกับนักสะสมที่ตามหาตัวลิมิเต็ดเฉพาะทาง"
+      ],
+      "goodFor": "นักสะสมตัวจริงที่ต้องการรุ่นพิเศษหายากเสริมคอลเลกชัน RX-78"
+    },
+    {
+      "id": "pg-gundam-x",
+      "name": "GX-9900 Gundam X",
+      "series": "After War Gundam X",
+      "grade": "PG",
+      "scale": "1/60",
+      "heightMm": 295,
+      "material": "ABS, PS, PC",
+      "priceYen": 24200,
+      "releaseYear": 2021,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2020/12/item_01_3340.jpg",
+      "highlights": [
+        "ดาวพลังแซทเทไลท์แคนนอนเปิด-ปิดได้จริง",
+        "เป็น PG ตัวล่าสุดในเวลานั้นของซีรีส์ After War",
+        "โครงสร้างทันสมัยกว่ารุ่นคลาสสิกยุคก่อนหน้า",
+        "ราคาจับต้องได้กว่า PG ตัวเรือธงรุ่นใหม่อื่นๆ"
+      ],
+      "goodFor": "แฟน Gundam X ที่รอคอยตัวนี้ในระดับ PG มานาน"
+    },
+
+    {
+      "id": "rg-rx78-2",
+      "name": "RX-78-2 Gundam",
+      "series": "Mobile Suit Gundam",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 130,
+      "material": "ABS, PS",
+      "priceYen": 3300,
+      "releaseYear": 2010,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_1929.jpg",
+      "highlights": [
+        "RG ตัวแรกของไลน์ จุดเริ่มต้นเฟรมภายในระดับ 1/144",
+        "ระบบ Advanced MS Joint ทำให้ขยับได้คล่องเกินไซส์",
+        "ราคาประหยัด เหมาะเริ่มต้นสาย RG",
+        "ดีเทลเทียบเท่า MG แต่ตัวเล็กกว่า"
+      ],
+      "goodFor": "มือใหม่สาย RG ที่อยากเริ่มจากตัวต้นตำรับราคาย่อมเยา"
+    },
+    {
+      "id": "rg-unicorn",
+      "name": "RX-0 Unicorn Gundam",
+      "series": "Mobile Suit Gundam Unicorn",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 130,
+      "material": "ABS, PS, ชิ้นส่วนเรืองแสง",
+      "priceYen": 4180,
+      "releaseYear": 2014,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2150.jpg",
+      "highlights": [
+        "แปลงร่าง Unicorn → Destroy Mode ได้แบบ RG เต็มรูปแบบ",
+        "ไซโคแฟรมเรืองแสงในที่มืดได้จริงโดยไม่ต้องทาสี",
+        "ราคาคุ้มมากเทียบกับฟีเจอร์ที่ได้",
+        "เป็น RG ขายดีที่สุดตัวหนึ่งตลอดกาล"
+      ],
+      "goodFor": "คนที่อยากได้กลไกแปลงร่าง Unicorn แบบจ่ายไม่แพง"
+    },
+    {
+      "id": "rg-freedom",
+      "name": "ZGMF-X10A Freedom Gundam",
+      "series": "Mobile Suit Gundam SEED",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 135,
+      "material": "ABS, PS",
+      "priceYen": 3300,
+      "releaseYear": 2012,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2107.jpg",
+      "highlights": [
+        "ปีกกาง 8 ใบพร้อมจุดยึดอาวุธครบตามต้นฉบับ",
+        "เฟรมในตัวเล็กแต่ยังคงรายละเอียดสมจริง",
+        "ตัวเบาทำให้ทรงปีกกางได้มั่นคง",
+        "หนึ่งใน RG ที่ขายดีต่อเนื่องในกลุ่มแฟน SEED"
+      ],
+      "goodFor": "แฟน SEED ที่อยากได้ Freedom ตัวเล็กราคาประหยัดแต่ดีเทลจัด"
+    },
+    {
+      "id": "rg-wing-zero-ew",
+      "name": "Wing Gundam Zero (EW)",
+      "series": "New Mobile Report Gundam Wing: Endless Waltz",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 130,
+      "material": "ABS, PS",
+      "priceYen": 3300,
+      "releaseYear": 2014,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2200.jpg",
+      "highlights": [
+        "ปีกกางพร้อมกลไกขยับในตัว แม้ไซส์เล็ก",
+        "ทวินบัสเตอร์ไรเฟิลขนาดใหญ่เทียบสัดส่วนตัว",
+        "น้ำหนักเบาเหมาะทำท่าบินตั้งโชว์",
+        "ราคาย่อมเยาเข้าถึงง่ายกว่ารุ่น PG มาก"
+      ],
+      "goodFor": "แฟน Wing ที่งบจำกัดแต่อยากได้ทรงปีกกางสวยๆ"
+    },
+    {
+      "id": "rg-strike-freedom",
+      "name": "ZGMF-X20A Strike Freedom Gundam",
+      "series": "Mobile Suit Gundam SEED Destiny",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 145,
+      "material": "ABS, PS",
+      "priceYen": 3960,
+      "releaseYear": 2014,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2198.jpg",
+      "highlights": [
+        "ปีกพับเก็บและกางได้พร้อมฟันเนลถอดแยกได้",
+        "ดราก้อนเรลกันครบชุดตามภาพต้นฉบับ",
+        "เป็นตัวเรือธงของซีรีส์ SEED Destiny ในไซส์ RG",
+        "รายละเอียดพาเนลไลน์ละเอียดเทียบเท่า MG รุ่นเก่า"
+      ],
+      "goodFor": "แฟน SEED Destiny ที่อยากได้บอสตัวสุดท้ายไซส์กะทัดรัด"
+    },
+    {
+      "id": "rg-sinanju",
+      "name": "MSN-06S Sinanju",
+      "series": "Mobile Suit Gundam Unicorn",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 130,
+      "material": "ABS, PS, ชุบเงา",
+      "priceYen": 3520,
+      "releaseYear": 2015,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2350.jpg",
+      "highlights": [
+        "พื้นผิวสีทองแดงเมทัลลิกพิเศษไม่เหมือนรุ่นอื่น",
+        "ฟันเนลและไรเฟิลครบตามตัวจริงในเรื่อง",
+        "ทรงเพรียวบางสมจริงตามดีไซน์ต้นฉบับ",
+        "เป็น RG ฝั่งศัตรูที่ได้รับความนิยมสูง"
+      ],
+      "goodFor": "แฟน Unicorn ที่อยากได้คู่ปรับ Sinanju ไว้คู่กับ Unicorn"
+    },
+    {
+      "id": "rg-nu-gundam",
+      "name": "RX-93 ν Gundam",
+      "series": "Mobile Suit Gundam: Char's Counterattack",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 135,
+      "material": "ABS, PS",
+      "priceYen": 3300,
+      "releaseYear": 2015,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2400.jpg",
+      "highlights": [
+        "ฟินฟันเนลถอดแยกจัดวางได้ 6 ตัว แม้ไซส์เล็ก",
+        "โล่และไรเฟิลครบชุดตามภาพยนตร์",
+        "เฟรมภายในระดับ RG ทำให้ขยับได้คล่อง",
+        "ราคาประหยัดกว่ารุ่น PG มาก เหมาะเก็บคู่กัน"
+      ],
+      "goodFor": "คนที่ชอบ Nu Gundam แต่ไม่อยากจ่ายราคา PG"
+    },
+    {
+      "id": "rg-zaku-ii",
+      "name": "MS-06S Zaku II (Char's Custom)",
+      "series": "Mobile Suit Gundam",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 125,
+      "material": "ABS, PS",
+      "priceYen": 3300,
+      "releaseYear": 2017,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2850.jpg",
+      "highlights": [
+        "ตัวร้ายในตำนานสีแดงเฉพาะของชาร์ในไซส์ RG",
+        "บาซูก้าและฮีทฮอว์กครบตามต้นฉบับ",
+        "เฟรมในตัวทำให้ขยับสมจริงกว่า HG รุ่นเก่า",
+        "ราคาประหยัดเหมาะจับคู่กับ RG RX-78-2"
+      ],
+      "goodFor": "นักสะสมที่อยากได้คู่ปรับ Zaku ตั้งโชว์คู่กับ RX-78-2 ไซส์เดียวกัน"
+    },
+    {
+      "id": "rg-exia",
+      "name": "GN-001 Gundam Exia",
+      "series": "Mobile Suit Gundam 00",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 130,
+      "material": "ABS, PS",
+      "priceYen": 3300,
+      "releaseYear": 2011,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_1990.jpg",
+      "highlights": [
+        "ดาบ GN ทั้ง 4 เล่มจัดท่าได้แม้ไซส์เล็ก",
+        "ทรงผอมเพรียวตามดีไซน์ต้นฉบับชัดเจน",
+        "เป็น RG รุ่นแรกๆ ที่วางรากฐานสาย Gundam 00",
+        "ราคาจับต้องง่ายเหมาะเริ่มเล่นสาย 00"
+      ],
+      "goodFor": "แฟน Gundam 00 ที่อยากได้ Exia ไซส์เล็กราคาประหยัด"
+    },
+    {
+      "id": "rg-justice-gundam",
+      "name": "ZGMF-X09A Justice Gundam",
+      "series": "Mobile Suit Gundam SEED",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 130,
+      "material": "ABS, PS",
+      "priceYen": 3520,
+      "releaseYear": 2019,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2019/05/item_01_3050.jpg",
+      "highlights": [
+        "ปืนใหญ่ Fatum-00 ติดหลังครบชุดตามต้นฉบับ",
+        "เฟรมแน่นหนากว่า RG รุ่นแรกๆ เพราะออกทีหลัง",
+        "จับคู่สวยกับ RG Freedom Gundam ได้พอดี",
+        "เหมาะเก็บคู่กับ Freedom เป็นชุดคู่หู"
+      ],
+      "goodFor": "แฟน SEED ที่อยากได้ Justice มาคู่กับ Freedom ในชั้นวาง"
+    },
+    {
+      "id": "rg-banshee-norn",
+      "name": "RX-0[N] Unicorn Gundam 02 Banshee Norn",
+      "series": "Mobile Suit Gundam NT",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 130,
+      "material": "ABS, PS, ชิ้นส่วนเรืองแสง",
+      "priceYen": 4180,
+      "releaseYear": 2018,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2980.jpg",
+      "highlights": [
+        "แปลงร่าง Destroy Mode สีดำสุดเท่ตามภาค NT",
+        "ไซโคแฟรมเรืองแสงในตัวเช่นเดียวกับ Unicorn ตัวแรก",
+        "ดีไซน์โทนดำตัดทองโดดเด่นไม่เหมือนใคร",
+        "เหมาะเก็บคู่กับ RG Unicorn เป็นชุดพี่น้อง"
+      ],
+      "goodFor": "แฟน Gundam NT ที่อยากได้ Banshee Norn คู่กับ Unicorn ตัวพี่"
+    },
+    {
+      "id": "rg-aerial",
+      "name": "XVX-016 Gundam Aerial",
+      "series": "Mobile Suit Gundam: The Witch from Mercury",
+      "grade": "RG",
+      "scale": "1/144",
+      "heightMm": 130,
+      "material": "ABS, PS",
+      "priceYen": 3300,
+      "releaseYear": 2023,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2022/12/item_01_3450.jpg",
+      "highlights": [
+        "ตัวเอกจากซีรีส์ยุคใหม่ในเฟรมระดับ RG",
+        "GUND-ARM Wireless Linkage System จำลองผ่านจุดเชื่อมต่อพิเศษ",
+        "ดีไซน์เพรียวบางทันสมัยต่างจาก UC รุ่นเก่า",
+        "ราคาประหยัดเหมาะเริ่มเล่นซีรีส์ใหม่"
+      ],
+      "goodFor": "แฟนซีรีส์ The Witch from Mercury ที่อยากเริ่มสะสม Aerial"
+    },
+
+    {
+      "id": "mega-rx78-2",
+      "name": "RX-78-2 Gundam",
+      "series": "Mobile Suit Gundam",
+      "grade": "MEGA SIZE",
+      "scale": "1/48",
+      "heightMm": 375,
+      "material": "ABS, PS",
+      "priceYen": 6600,
+      "releaseYear": 2014,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2550.jpg",
+      "highlights": [
+        "ตัวแรกของไลน์ Mega Size ที่จุดประกายให้คนเล่นกันพลาตัวใหญ่ราคาประหยัด",
+        "ใหญ่เกือบเท่า PG แต่ราคาถูกกว่ามาก เพราะลดความซับซ้อนของเฟรม",
+        "ประกอบง่าย เหมาะมือใหม่ที่อยากได้ตัวใหญ่ตัวแรก",
+        "สัดส่วนใกล้เคียง 1/48 ทำให้ตั้งโชว์เด่นชัดเจน"
+      ],
+      "goodFor": "มือใหม่หรือคนงบจำกัดที่อยากได้กันพลาตัวใหญ่ไว้ตั้งโชว์โดยไม่ต้องจ่ายราคา PG"
+    },
+    {
+      "id": "mega-freedom",
+      "name": "ZGMF-X10A Freedom Gundam",
+      "series": "Mobile Suit Gundam SEED",
+      "grade": "MEGA SIZE",
+      "scale": "1/48",
+      "heightMm": 390,
+      "material": "ABS, PS",
+      "priceYen": 7700,
+      "releaseYear": 2015,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2600.jpg",
+      "highlights": [
+        "ปีกกาง 8 ใบขนาดใหญ่อลังการในราคาประหยัด",
+        "ไรเฟิลและจุดยึดอาวุธครบตามต้นฉบับแม้ลดความซับซ้อนเฟรม",
+        "เหมาะสำหรับคนอยากได้ทรงปีกกางใหญ่ไว้ตั้งโชว์",
+        "ราคาคุ้มเมื่อเทียบกับขนาดที่ได้"
+      ],
+      "goodFor": "แฟน SEED ที่อยากได้ Freedom ตัวใหญ่อลังการแบบไม่แพง"
+    },
+    {
+      "id": "mega-unicorn",
+      "name": "RX-0 Unicorn Gundam",
+      "series": "Mobile Suit Gundam Unicorn",
+      "grade": "MEGA SIZE",
+      "scale": "1/48",
+      "heightMm": 380,
+      "material": "ABS, PS, ชิ้นส่วนเรืองแสง",
+      "priceYen": 7700,
+      "releaseYear": 2018,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2920.jpg",
+      "highlights": [
+        "แปลงร่าง Destroy Mode ได้จริงในไซส์ใหญ่ราคาประหยัด",
+        "ไซโคแฟรมเรืองแสงได้เช่นเดียวกับรุ่น RG/PG",
+        "ทางเลือกราคาย่อมเยาแทน PG Unicorn ที่แพงกว่ามาก",
+        "เหมาะตั้งโชว์เป็นจุดเด่นในชั้นวางขนาดใหญ่"
+      ],
+      "goodFor": "คนที่อยากได้ Unicorn ตัวใหญ่แปลงร่างได้ แต่งบไม่ถึง PG"
+    },
+    {
+      "id": "mega-wing-zero-ew",
+      "name": "Wing Gundam Zero (EW)",
+      "series": "New Mobile Report Gundam Wing: Endless Waltz",
+      "grade": "MEGA SIZE",
+      "scale": "1/48",
+      "heightMm": 370,
+      "material": "ABS, PS",
+      "priceYen": 6600,
+      "releaseYear": 2017,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2870.jpg",
+      "highlights": [
+        "ปีกกางขนาดใหญ่สะดุดตาในราคาประหยัดกว่า PG มาก",
+        "ทวินบัสเตอร์ไรเฟิลสัดส่วนใหญ่สมจริง",
+        "ประกอบง่ายเหมาะมือใหม่สายปีกกาง",
+        "น้ำหนักเบาทำให้ทรงท่ากางปีกได้มั่นคง"
+      ],
+      "goodFor": "แฟน Wing ที่อยากได้ทรงปีกกางใหญ่อลังการแบบประหยัดงบ"
+    },
+    {
+      "id": "mega-strike-freedom",
+      "name": "ZGMF-X20A Strike Freedom Gundam",
+      "series": "Mobile Suit Gundam SEED Destiny",
+      "grade": "MEGA SIZE",
+      "scale": "1/48",
+      "heightMm": 400,
+      "material": "ABS, PS",
+      "priceYen": 7700,
+      "releaseYear": 2016,
+      "image": "https://www.bandai-hobby.net/wp/wp-content/uploads/2018/07/item_01_2650.jpg",
+      "highlights": [
+        "ดราก้อนเรลและฟันเนลครบชุดในไซส์ใหญ่ราคาประหยัด",
+        "เป็นหนึ่งใน Mega Size ที่สูงที่สุดในไลน์",
+        "เหมาะเป็นตัวโชว์หลักสำหรับคนงบจำกัดที่อยากได้ตัวใหญ่",
+        "ดีไซน์ปีกพับ-กางสมจริงแม้ลดความซับซ้อนเฟรม"
+      ],
+      "goodFor": "แฟน SEED Destiny ที่อยากได้ Strike Freedom ตัวใหญ่สุดอลังการในราคาย่อมเยา"
+    }
+  ]
+}
